@@ -30,8 +30,10 @@
       </div>
     </div>
     <header class="header">
+      <!--상단 메뉴 내용 및 icons-->
       <div class="header__header-column">
         <h1 class="header__title">Chats</h1>
+        <!--h1 is mean sizes-->
       </div>
       <div class="header__header-column">
         <span class="header__icon">
@@ -42,8 +44,35 @@
         </span>
         <span class="header__icon">
           <i class="fas fa-cog"></i>
+          <!--fa-5x를 입력하면 size 변화-->
         </span>
       </div>
     </header>
+    <nav class="nav">
+      <!--nav__list-item이라는 class명을 가진 li가 있고 그 안에는 class명이 nav__list인 a태그가 들어간다.-->
+      <ul class="nav__list">
+        <!--li.nav__list-item*4>a.nav__list-link 작성시 아래 4개가 나온다.-->
+        <li class="nav__list-item">
+          <a href="friends.html" class="nav__list-link">
+            <i class="far fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="nav__list-link">
+            <i class="fas fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="nav__list-link">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="nav__list-link">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </body>
 </html>
