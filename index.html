@@ -44,7 +44,7 @@
         </span>
         <span class="header__icon">
           <i class="fas fa-cog"></i>
-          <!--fa-5x를 입력하면 size 변화-->
+          <!--fa-5x를 추가로 입력하면 size 변화-->
         </span>
       </div>
     </header>
@@ -52,22 +52,28 @@
       <!-- chats안에 여러가지 component를 만든다. chats안에 list와 chat를 종속-->
       <ul class="chats__list">
         <li class="chats__chat chat">
-          <!--chat안에 column, list, preview 등등을 종속-->
-          <div class="chat__column">
-            <img class="chat__avatar" src="images/avatar.jpg" />
-            <!--images 폴더에 있는 avatar라는 이미지를 불러온다. 모든 폴더랑 파일명은 소문자로 써야한다.-->
-            <div class="chat__content">
-              <span class="chat__username">
-                Teo
-              </span>
-              <span class="chat__preview">Going home!!</span>
+          <a href="chat.html">
+            <!--chat안에 column, list, preview 등등을 종속-->
+            <div class="chat__column">
+              <img
+                class="chat__avatar g-avatar"
+                src="images/avatar.jpg"
+              /><!--g-avatar라는 전역변수를 선언하여 모든 웹사이트에서 영향을 준다.-->
+              <!--images 폴더에 있는 avatar라는 이미지를 불러온다. 모든 폴더랑 파일명은 소문자로 써야한다.-->
+              <div class="chat__content">
+                <span class="chat__username">
+                  Teo
+                </span>
+                <span class="chat__preview">Going home!!</span>
+              </div>
             </div>
-          </div>
-          <div class="chat__column">
-            <span class="chat__timestamp">Yesterday</span>
-          </div>
+            <div class="chat__column">
+              <span class="chat__timestamp">Yesterday</span>
+            </div>
+          </a>
         </li>
       </ul>
+      <!--div는 box, span은 box for text, ul은 list, li는 inside of list를 의미한다.-->
     </main>
     <nav class="nav">
       <!--navigation bar를 선언-->
