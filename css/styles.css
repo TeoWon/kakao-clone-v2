@@ -4,6 +4,12 @@
 /* font size가 정해져 있는데 그걸 초기화 해준다. */
 @import "status-bar.css";
 @import "header.css";
+@import "nav-bar.css";
+
+* {
+  box-sizing: border-box;
+  /* padding이 추가될 때 box가 그만큼 커지지 않게 해준다. */
+}
 body {
   background-color: white;
   padding: 10px 20px;

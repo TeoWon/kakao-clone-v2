@@ -1,0 +1,19 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  /* position: fixed;를 사용하려면 width를 항상 설정해줘야한다.
+  요소를 기존 다른 것들에서부터 떼어내서 다른 레이어에 올려놔야하기 때문 */
+  background-color: #fcfcfc;
+  padding: 20px 50px;
+  left: 0px;
+  bottom: 0px;
+  border-top: 1px solid #f7f7f7;
+}
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav i {
+  font-size: 20px;
+}
