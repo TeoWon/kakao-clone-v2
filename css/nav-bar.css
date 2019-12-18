@@ -17,3 +17,22 @@
 .nav i {
   font-size: 20px;
 }
+
+.nav .nav__list-link {
+  position: relative;
+  /* relative 되어 있지 않으면 message icon에 pointing되지 않는다. */
+}
+.nav .nav__badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  font-size: 10px;
+  color: white;
+  background-color: #dc5d46;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
