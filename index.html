@@ -55,21 +55,26 @@
         <li class="chats__chat chat">
           <a href="chat.html">
             <!--chat안에 column, list, preview 등등을 종속-->
-            <div class="chat__column">
-              <img
-                class="chat__avatar g-avatar"
-                src="images/avatar.jpg"
-              /><!--g-avatar라는 전역변수를 선언하여 모든 웹사이트에서 영향을 준다.-->
-              <!--images 폴더에 있는 avatar라는 이미지를 불러온다. 모든 폴더랑 파일명은 소문자로 써야한다.-->
-              <div class="chat__content">
-                <span class="chat__username">
-                  Teo
-                </span>
-                <span class="chat__preview">Going home!!</span>
+            <div class="chats__chat friend friend--large">
+              <!--firend 부분에서 본인 사진은 친구들 사진과 크기가 차이가 있어 large로 구분해준다.-->
+              <div class="friend_column">
+                <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+                <div class="friend__content">
+                  <span class="friend__name">
+                    Eden Hazard
+                  </span>
+                  <span class="friend__bottom-text">
+                    Let's play soccer!
+                  </span>
+                </div>
               </div>
-            </div>
-            <div class="chat__column">
-              <span class="chat__timestamp">Yesterday</span>
+              <div class="friend__column">
+                <div class="friend__now-listening">
+                  <span class="chat__timestamp">
+                    December 18
+                  </span>
+                </div>
+              </div>
             </div>
           </a>
         </li>
