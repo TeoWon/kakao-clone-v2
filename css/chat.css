@@ -1,0 +1,47 @@
+.chats-body {
+  padding: 10px 0px;
+  /* body는 default값 padding을 가지고 있는데 background를 적용할 때 문제가 됨 */
+}
+
+.chats-body .header,
+.chats-body .status-bar {
+  padding: 0px 20px;
+}
+.chat {
+  background-image: url("../images/chatBg.png");
+  min-height: 100vh;
+  /* scroll을 해도 send message는 남아있다 */
+}
+.chat__write {
+  position: fixed;
+  bottom: 50px;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  /* margin: 0 auto;는 fixed가 적용된 container에 가운데 정렬하는 방법 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: #fcfcfc;
+  border-radius: 40px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  /* stripe의 sigma shadow를 참고 */
+}
+.chat__write i {
+  font-size: 22px;
+}
+.chat__write-column:nth-child(2) {
+  width: 80%;
+}
+.chat__write-column input {
+  padding: 20px 10px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+.chat__write-column input:focus {
+  outline: none;
+}
