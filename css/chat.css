@@ -23,10 +23,9 @@
   min-height: 1000vh;
   /* scroll을 해도 send message는 남아있다 */
 }
-.chat__write {
+.chat__write--container {
   position: fixed;
-  bottom: 50px;
-  width: 80%;
+  bottom: 0px;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -36,10 +35,37 @@
   align-items: center;
   background-color: #fcfcfc;
   padding: 0px 20px;
-  border-radius: 40px;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  /* box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025); */
   /* stripe의 sigma shadow를 참고 */
+}
+.chat__write {
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+.chat__icon-left {
+  position: absolute;
+}
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
+}
+.chat__write:focus {
+  outline: none;
+}
+.chat__icon {
+  font-size: 18px;
+  transition: opacity 0.3s ease-in-out;
+  /* 아래의 code때문에 click 시에 0.3s 내로 icon의 opacity가 0으로 되게 설정하는 transition을 해줌 */
+}
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
+  /* ~는 input 다음에 있는 sibling을 선택, click 시에는 icon이 사라진다. */
 }
 .chat__write i {
   font-size: 22px;
@@ -47,15 +73,12 @@
 .chat__write-column:nth-child(2) {
   width: 80%;
 }
-.chat__write-column input {
+/* .chat__write-column input {
   padding: 20px 10px;
   width: 100%;
   border: none;
   font-size: 14px;
-}
-.chat__write-column input:focus {
-  outline: none;
-}
+} */
 .chat-screen .chat__messages {
   border-top: 1px solid #f7f7f7;
   display: flex;
