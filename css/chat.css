@@ -33,13 +33,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fcfcfc;
-  padding: 0px 20px;
-  /* box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025); */
-  /* stripe의 sigma shadow를 참고 */
+  width: 100%;
+}
+.chat__icon-left {
+  position: absolute;
+  left: 10px;
+}
+.chat__icon-right {
+  position: absolute;
+  right: 10px;
 }
 .chat__write {
+  margin: 0 auto;
+  /* margin은 animate 불가라서 .chat__write:focus에 있는 margin을 옮겨옴  */
   bottom: 0px;
   width: 100%;
   border-radius: 0;
@@ -47,16 +53,17 @@
   width: 100%;
   border: none;
   font-size: 14px;
-}
-.chat__icon-left {
-  position: absolute;
-}
-.chat__icon-right {
-  position: absolute;
-  right: 10px;
+  transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+  /* click시 box가 위로 올라가고 80%로 줄어들며 icon is disappear */
 }
 .chat__write:focus {
   outline: none;
+  width: 80%;
+  transform: translateY(-100px);
+  border-radius: 40px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 .chat__icon {
   font-size: 18px;
@@ -73,12 +80,6 @@
 .chat__write-column:nth-child(2) {
   width: 80%;
 }
-/* .chat__write-column input {
-  padding: 20px 10px;
-  width: 100%;
-  border: none;
-  font-size: 14px;
-} */
 .chat-screen .chat__messages {
   border-top: 1px solid #f7f7f7;
   display: flex;
